@@ -1,0 +1,15 @@
+#logo {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 25% 30%;
+  padding: 0;
+}
+
+.user-state {
+    padding: 100% 0;
+}

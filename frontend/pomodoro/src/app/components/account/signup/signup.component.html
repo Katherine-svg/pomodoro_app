@@ -1,1 +1,15 @@
-<p>signup works!</p>
+<form>
+    <h1>Sign up</h1>
+    <label>Email</label>
+    <input type="email" [(ngModel)] = 'email' />
+
+    <hr>
+    <label>Username</label>
+    <input type="text" [(ngModel)] = 'username' />
+    <label>Password</label>
+    <input type="password" [(ngModel)] = 'password' />
+
+    <hr>
+
+    <button (click)="register()">register</button>
+</form>

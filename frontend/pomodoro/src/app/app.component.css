@@ -1,0 +1,22 @@
+app-navbar {
+  position: fixed;
+  width: 10%;
+  height: 100vh;
+  left: 0;
+  border: solid 1px black;
+}
+
+#positioning {
+  position: absolute;
+  right: 0;
+  width: 89.7%;
+  border: solid 1px black;
+}
+
+#feed {
+  border: solid 1px black;
+}
+
+app-footer {
+  height: 10%;
+}

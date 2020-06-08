@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { AccSettingsComponent } from './components/account/acc-settings/acc-sett
 import { PomodoroClockComponent } from './components/core-appservices/pomodoro-clock/pomodoro-clock.component';
 import { ArchiveComponent } from './components/core-appservices/archive/archive.component';
 import { TasksComponent } from './components/core-appservices/tasks/tasks.component';
+import { DashboardComponent } from './components/account/dashboard/dashboard.component';
+import { LogoutComponent } from './components/account/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { TasksComponent } from './components/core-appservices/tasks/tasks.compon
     AccSettingsComponent,
     PomodoroClockComponent,
     ArchiveComponent,
-    TasksComponent
+    TasksComponent,
+    DashboardComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
