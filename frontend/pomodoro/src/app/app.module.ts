@@ -5,10 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './components/account/login/login.component';
+import { SignupComponent } from './components/account/signup/signup.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { AccSettingsComponent } from './components/acc-settings/acc-settings.component';
+import { AccSettingsComponent } from './components/account/acc-settings/acc-settings.component';
+import { PomodoroClockComponent } from './components/core-appservices/pomodoro-clock/pomodoro-clock.component';
+import { ArchiveComponent } from './components/core-appservices/archive/archive.component';
+import { TasksComponent } from './components/core-appservices/tasks/tasks.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { AccSettingsComponent } from './components/acc-settings/acc-settings.com
     LoginComponent,
     SignupComponent,
     FooterComponent,
-    AccSettingsComponent
+    AccSettingsComponent,
+    PomodoroClockComponent,
+    ArchiveComponent,
+    TasksComponent
   ],
   imports: [
     BrowserModule,
