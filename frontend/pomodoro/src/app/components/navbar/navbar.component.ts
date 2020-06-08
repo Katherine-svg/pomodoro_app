@@ -12,4 +12,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getUser() {
+    return sessionStorage.getItem("currentuser") || ''
+  }
 }

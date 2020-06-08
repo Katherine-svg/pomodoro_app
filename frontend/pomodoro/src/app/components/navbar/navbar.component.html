@@ -5,10 +5,12 @@
             <div id="logo"></div>
 
         </a></li>
-
+        <div *ngIf="getUser() == ''; else elseBlock">
         <li class="user-state">
             <a routerLink="login">Login</a>
         </li>
+        </div>
+        <ng-template #elseBlock>
         <li class="user-state">
             <a routerLink="logout">Log out</a>
         </li>
@@ -21,5 +23,6 @@
         <li>
             <a routerLink="settings">Settings</a>
         </li>
+        </ng-template>
       </ul>
 </div>

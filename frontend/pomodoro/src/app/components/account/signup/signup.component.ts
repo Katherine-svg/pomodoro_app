@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -19,7 +20,10 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  register() {
+  register(s: NgForm) {
+    console.log(s.value.email)
+    console.log(s.value.username)
+    console.log(s.value.password)
   this.router.navigate(['/login']);
   }
 }

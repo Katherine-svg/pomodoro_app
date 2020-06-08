@@ -1,12 +1,12 @@
-<form>
+<form #f="ngForm" (ngSubmit)="login(f)" novalidate>
     <h1>Login</h1>
 
     <label>Username</label>
-    <input type="text" [(ngModel)] = 'username' />
+    <input type="text" name="username" ngModel required #username="ngModel" />
     <label>Password</label>
-    <input type="password" [(ngModel)] = 'password' />
+    <input type="password" name="password" ngModel />
 
     <hr>
 
-    <button (click)="login()">register</button>
+    <button>register</button>
 </form>

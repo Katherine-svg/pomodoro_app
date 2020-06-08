@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,9 +9,6 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  username
-  password
-
   constructor(
     private router: Router
   ) { }
@@ -18,8 +16,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login() {
-    this.router.navigate(['/pomodoro-clock']);
+  login(f: NgForm) {
+    console.log(f.value.username)
+    console.log(f.value.password)
+    sessionStorage.setItem("currentuser", f.value.username)
+    this.router.navigate(['/pomodoro-clock'])
   }
 
 }

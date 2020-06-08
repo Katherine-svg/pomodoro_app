@@ -1,15 +1,15 @@
-<form>
+<form #s="ngForm" (ngSubmit)="register(s)" novalidate>
     <h1>Sign up</h1>
     <label>Email</label>
-    <input type="email" [(ngModel)] = 'email' />
+    <input type="email" name="email" ngModel #email="ngModel" />
 
     <hr>
     <label>Username</label>
-    <input type="text" [(ngModel)] = 'username' />
+    <input type="text" name="username" ngModel required />
     <label>Password</label>
-    <input type="password" [(ngModel)] = 'password' />
+    <input type="password" name="password" ngModel required />
 
     <hr>
 
-    <button (click)="register()">register</button>
+    <button>register</button>
 </form>
