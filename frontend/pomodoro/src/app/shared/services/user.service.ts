@@ -21,7 +21,7 @@ export class UserService {
     )
   }
 
-  signupRequest(user:User) {
+  saveOrUpdateUser(user:User) {
     return this.client.post<User>(
       `${this.url}/user/signup`
         , user
