@@ -33,8 +33,12 @@ export class PomodoroClockComponent implements OnInit {
 
       if (this.time < 60)
       this.secondsToMinutes = this.time
-      else
+      else if (!(this.time > 1500))
       this.secondsToMin(this.time)
+      else
+      this.reset()
+      // fix this to go on break and loop back
+      this.secondsToMinutes = '25:00'
       
     }, 1500)
     this.active = true
