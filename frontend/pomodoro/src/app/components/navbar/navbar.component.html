@@ -1,16 +1,23 @@
 <div id="navbar">
     <ul>
+        <div *ngIf="getUser() == ''; else elseBlock">
         <li><a routerLink="">
 
             <div id="logo"></div>
 
         </a></li>
-        <div *ngIf="getUser() == ''; else elseBlock">
+        
         <li class="user-state">
             <a routerLink="login">Login</a>
         </li>
         </div>
+        
         <ng-template #elseBlock>
+        <li><a routerLink="pomodoro-clock">
+
+            <div id="logo"></div>
+    
+        </a></li>
         <li class="user-state">
             <a routerLink="logout">Log out</a>
         </li>

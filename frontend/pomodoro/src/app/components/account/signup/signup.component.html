@@ -1,5 +1,6 @@
+<div id="signupForm">
+<h1>Sign up</h1>
 <form #s="ngForm" (ngSubmit)="register(s)" novalidate>
-    <h1>Sign up</h1>
     <label>Email</label>
     <input type="email" name="email" ngModel #email="ngModel" />
 
@@ -13,3 +14,4 @@
 
     <button>register</button>
 </form>
+</div>

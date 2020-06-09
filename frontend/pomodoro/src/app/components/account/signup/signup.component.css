@@ -1,6 +1,9 @@
-form {
+#signupForm {
     width: 30%;
     margin: 15% auto;
+}
+form {
+    margin: 3% auto;
 }
 
 hr {

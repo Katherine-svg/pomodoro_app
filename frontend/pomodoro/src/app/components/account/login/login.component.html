@@ -1,5 +1,6 @@
+<div id="loginForm">
+<h1>Login</h1>
 <form #f="ngForm" (ngSubmit)="login(f)" novalidate>
-    <h1>Login</h1>
 
     <label>Username</label>
     <input type="text" name="username" ngModel required #username="ngModel" />
@@ -10,3 +11,4 @@
 
     <button>register</button>
 </form>
+</div>

@@ -1,1 +1,7 @@
-<p>pomodoro-clock works!</p>
+<div id="pomodoro">
+    <p>{{ time }}</p>
+    <p>{{ secondsToMinutes }}</p>
+    <button id="start" (click)="start()" *ngIf="active == false" >Start</button>
+    <button id="pause" (click)="pause()" *ngIf="active" >Pause</button>
+    <button id="stop" (click)="reset()" *ngIf="active"  >reset</button>
+</div>

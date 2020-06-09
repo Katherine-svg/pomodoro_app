@@ -1,0 +1,23 @@
+#pomodoro {
+    width: 400px;
+    height: 400px;
+    background: black;
+    margin: 5% auto;
+    padding: 4%;
+}
+
+p {
+    text-align: center;
+    font-size: 7em;
+    color: white;
+}
+
+button {
+    margin: 5%;
+}
+
+/*
+#start {}
+#pause {}
+#stop {}
+*/

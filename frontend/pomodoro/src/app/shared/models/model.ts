@@ -8,6 +8,6 @@ export enum Role {
     username: string;
     password: string;
     email: string;
-    role: string;
+    role: Role;
     token?: string;
 }
