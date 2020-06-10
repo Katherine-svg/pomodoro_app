@@ -1,7 +1,20 @@
+<div class="formDiv" *ngIf="goal == null; else elseBlock">
+    <form #f="ngForm" (ngSubmit)="saveTask(f)" novalidate>
+
+        <label>What task would you like to achive?</label>
+        <input type="text" name="task" ngModel required #task="ngModel" />
+        <button>Create task</button>
+          
+    </form>
+</div>
+<ng-template #elseBlock>
 <div id="pomodoro">
-    <p>{{ time }}</p>
-    <p>{{ secondsToMinutes }}</p>
+
+    <p>{{ goal }}</p>
+    
+    <p id="time">{{ secondsToMinutes }}</p>
     <button id="start" (click)="start()" *ngIf="active == false" >Start</button>
     <button id="pause" (click)="pause()" *ngIf="active" >Pause</button>
     <button id="stop" (click)="reset()" *ngIf="active"  >reset</button>
 </div>
+</ng-template>

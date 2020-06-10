@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pomodoro-clock.component.css']
 })
 export class PomodoroClockComponent implements OnInit {
-
+// pomodoro clock variables
   time: number = 0
   interval
 
@@ -21,11 +21,17 @@ export class PomodoroClockComponent implements OnInit {
 
   active: boolean = false
 
+// task form variables
+
+goal: string
+
   constructor() { }
 
   ngOnInit(): void {
     
   }
+
+  // pomodoro clock methods
 
   start() {
    this.interval = setInterval(() => {
@@ -37,9 +43,6 @@ export class PomodoroClockComponent implements OnInit {
       this.secondsToMin(this.time)
       else
       this.reset()
-      // fix this to go on break and loop back
-      this.secondsToMinutes = '25:00'
-      
     }, 1500)
     this.active = true
   }
@@ -50,7 +53,7 @@ export class PomodoroClockComponent implements OnInit {
   reset() {
     clearInterval(this.interval);
     this.time = 0
-    this.secondsToMin(this.time)
+    this.secondsToMinutes = this.time
   }
 
   secondsToMin(s:number) {
@@ -64,6 +67,13 @@ export class PomodoroClockComponent implements OnInit {
 
     this.secondsToMinutes =  `${this.mString.slice(-2)} : ${this.sString.slice(-2)}`
 
+  }
+
+  // methods for goal : actual task to complete
+
+  saveTask(f) {
+    this.goal = f.value.task
+    console.log(this.goal)
   }
 
 }

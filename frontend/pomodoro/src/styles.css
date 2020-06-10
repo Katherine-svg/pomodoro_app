@@ -17,3 +17,26 @@ font-family: 'Montserrat', sans-serif;
 h1, h2, p, label {
     padding: 3% 0;
 }
+
+
+/* all forms basic style */
+
+.formDiv {
+    width: 30%;
+    margin: 15% auto;
+}
+
+form {
+    margin: 3% auto;
+}
+
+hr {
+    margin: 8px 0;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }

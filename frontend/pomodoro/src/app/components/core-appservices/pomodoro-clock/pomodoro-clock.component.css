@@ -12,12 +12,14 @@
 
 p {
     text-align: center;
-    font-size: 7em;
+    font-size: 1em;
     color: white;
 }
 
-button {
-    margin: 5%;
+#time {
+    text-align: center;
+    font-size: 7em;
+    color: white;
 }
 
 /*
