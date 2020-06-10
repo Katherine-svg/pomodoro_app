@@ -11,10 +11,17 @@
 <div id="pomodoro">
 
     <p>{{ goal }}</p>
+    <p>{{ status }}</p>
+    <p>{{ pomodoroComplete }}</p>
     
     <p id="time">{{ secondsToMinutes }}</p>
-    <button id="start" (click)="start()" *ngIf="active == false" >Start</button>
-    <button id="pause" (click)="pause()" *ngIf="active" >Pause</button>
-    <button id="stop" (click)="reset()" *ngIf="active"  >reset</button>
+
+<div *ngIf="active == false; else pauseReset">
+    <button id="start" (click)="start()" >Start</button>
+</div>
+<ng-template #pauseReset>
+    <button id="pause" (click)="pause()" >Pause</button>
+    <button id="stop" (click)="reset()" >reset</button>
+</ng-template>
 </div>
 </ng-template>
