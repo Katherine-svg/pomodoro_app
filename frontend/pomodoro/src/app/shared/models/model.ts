@@ -17,6 +17,7 @@ export class Task {
   startTime: Date;
   pomodoro: Intervals[]
   endTime?: Date;
+  userId?: number;
   id?: number;
 
   constructor(task: string
@@ -36,6 +37,14 @@ export class Task {
 
   getPomodoro() {
    return this.pomodoro;
+  }
+
+  setUserId(num: number) {
+    this.userId = num
+   }
+
+  setEndTime(endTime: Date) {
+    this.endTime = endTime
   }
 }
 
