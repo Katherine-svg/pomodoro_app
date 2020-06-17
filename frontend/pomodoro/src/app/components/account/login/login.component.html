@@ -3,9 +3,24 @@
 <form #f="ngForm" (ngSubmit)="login(f)" novalidate>
 
     <label>Username</label>
-    <input type="text" name="username" ngModel required #username="ngModel" />
+    <input type="text" name="username" ngModel #username="ngModel"
+    required minlength="4" />
     <label>Password</label>
     <input type="password" name="password" ngModel />
+
+
+    <div *ngIf="this.status == 'INVALID'">
+
+            <div *ngIf="username.errors?.required">
+                Name is required.
+            </div>
+            <!--
+            <div *ngIf="username.errors?.minlength">
+                Name must be at least 4 characters long.
+            </div>
+        -->
+
+    </div>
 
     <hr>
 

@@ -8,6 +8,9 @@ import { Task, Intervals } from 'src/app/shared/models/model';
 })
 export class PomodoroClockComponent implements OnInit {
 
+  // TODO look to see if there is any major changes I need to make
+  // TODO look for when to persist to database and how to manage exiting pomodoro component
+
   // task form variables
   goal: string
   task: Task
@@ -114,6 +117,9 @@ pomodoroTotal: number = 0
       console.log("long break pomodoroCount"+this.pomodoroCount)
 
       if (time == this.longBreak) {
+
+                  // update pomodoro here to be sent to the database
+
                     this.pomodoroTotal += this.pomodoroCount
                     this.pomodoroCount = 1
                     this.pomodoroComplete = 0
@@ -169,6 +175,19 @@ pomodoroTotal: number = 0
   saveTask(f) {
     this.goal = f.value.task
     this.task = new Task(this.goal, new Date)
+  }
+
+   // update task with every pomodoro
+
+  update(task) {
+    console.log(task)
+    this.getTask(task)
+  }
+
+  // get resent task id
+
+  getTask(task) {
+
   }
 
 }
