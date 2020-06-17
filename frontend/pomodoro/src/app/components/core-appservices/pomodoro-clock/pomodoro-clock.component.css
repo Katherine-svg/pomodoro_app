@@ -10,6 +10,10 @@
     padding: 4%;
 }
 
+#background {
+    border: solid 1px black;
+  }
+
 p {
     text-align: center;
     font-size: 1em;
