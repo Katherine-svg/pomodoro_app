@@ -12,6 +12,9 @@ export class ChartComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // https://www.npmjs.com/package/ngx-frappe-chart
+  // https://stackblitz.com/edit/ngx-frappe-chart-demo?embed=1&file=src/app/app.component.html
+
   yMarkers = [{ label: 'Marker', value: 15, options: { labelPos: 'left' } }];
   yRegions = [
     { label: 'Region', start: 30, end: 50, options: { labelPos: 'right' } }
