@@ -20,6 +20,8 @@ import { ChartComponent } from './components/account/dashboard/chart/chart.compo
 
 import { FrappeChartsModule } from 'ngx-frappe-chart';
 import { CalendarComponent } from './components/account/dashboard/calendar/calendar.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { CalendarComponent } from './components/account/dashboard/calendar/calen
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FrappeChartsModule
+    FrappeChartsModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory })
   ],
   providers: [],
   bootstrap: [AppComponent]

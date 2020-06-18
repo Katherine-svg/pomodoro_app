@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
+    "angular-calendar": "^0.28.16",
+    "date-fns": "^2.14.0",
     "frappe-charts": "^1.5.0",
     "frappe-gantt": "^0.3.0",
     "ngx-frappe-chart": "0.0.8",
