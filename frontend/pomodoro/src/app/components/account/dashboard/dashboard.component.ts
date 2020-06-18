@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  show: boolean = true
+  showc: boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  chart() {
+    this.show = true
+    this.showc = false
+  }
+
+  calendar() {
+    this.show = false
+    this.showc = true
+  }
 }

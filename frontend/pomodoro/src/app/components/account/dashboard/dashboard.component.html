@@ -1,11 +1,23 @@
 <div id="background">
 
+    <div id="inner-container">
     <h1>dashboard</h1>
+
+    <ul>
+        <li><button (click)="chart()">Chart</button></li>
+        <li><button (click)="calendar()">Calendar</button></li>
+    </ul>
 
     <div>
 
         <h2>Graphs</h2>
 
+        <app-chart *ngIf="show"></app-chart>
+
+        <app-calendar *ngIf="showc"></app-calendar>
+
     </div>
+
+</div>
 
 </div>

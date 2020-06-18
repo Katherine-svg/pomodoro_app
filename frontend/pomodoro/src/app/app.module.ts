@@ -15,7 +15,11 @@ import { ArchiveComponent } from './components/core-appservices/archive/archive.
 import { TasksComponent } from './components/core-appservices/tasks/tasks.component';
 import { DashboardComponent } from './components/account/dashboard/dashboard.component';
 import { LogoutComponent } from './components/account/logout/logout.component';
+import { LogManagmentComponent } from './components/log-managment/log-managment.component';
+import { ChartComponent } from './components/account/dashboard/chart/chart.component'
 
+import { FrappeChartsModule } from 'ngx-frappe-chart';
+import { CalendarComponent } from './components/account/dashboard/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +34,16 @@ import { LogoutComponent } from './components/account/logout/logout.component';
     ArchiveComponent,
     TasksComponent,
     DashboardComponent,
-    LogoutComponent
+    LogoutComponent,
+    LogManagmentComponent,
+    ChartComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FrappeChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

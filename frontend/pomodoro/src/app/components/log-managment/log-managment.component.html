@@ -1,0 +1,12 @@
+<div id="box">  
+    <div *ngIf="getUser() == ''; else elseBlock">
+    
+        <a routerLink="login">Login</a>
+    
+    </div>
+    <ng-template #elseBlock>
+    
+        <a routerLink="logout">Log out</a>
+
+    </ng-template>
+</div>

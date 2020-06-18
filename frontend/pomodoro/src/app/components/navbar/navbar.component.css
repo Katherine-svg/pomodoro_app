@@ -4,6 +4,10 @@
     background-color: black;
 }
 
+#submenu {
+  margin: 90% 0;
+}
+
 ul {
   list-style-type: none;
   margin: 30% 25%;

@@ -1,4 +1,11 @@
 /*
+
+charts
+
+*/
+@import 'frappe-charts/dist/frappe-charts.min.css';
+
+/*
 font-family: 'Roboto Mono', monospace;
 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;700&display=swap');

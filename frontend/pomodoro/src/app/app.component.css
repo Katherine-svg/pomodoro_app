@@ -5,6 +5,14 @@ app-navbar {
   left: 0;
 }
 
+app-log-managment {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 20%;
+  width: 100%;
+}
+
 #positioning {
   position: absolute;
   right: 0;
