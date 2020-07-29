@@ -8,6 +8,13 @@ import { Task, Intervals } from 'src/app/shared/models/model';
 })
 export class PomodoroClockComponent implements OnInit {
 
+  // fix pomodoro
+
+  // boolean whether user is logged in or not so I can know the set up of this pomodoro
+      // when user doesnt have an account. they can only use one pomodoro at a time
+      // when user has an account. they can see statistics and their behavior in this info
+  isThereUser:boolean = sessionStorage.getItem("currentuser") ? true : false;
+
   // TODO look to see if there is any major changes I need to make
   // TODO look for when to persist to database and how to manage exiting pomodoro component
 
@@ -62,7 +69,6 @@ pomodoroTotal: number = 0
   constructor() { }
 
   ngOnInit(): void {
-    
   }
 
   // pomodoro clock methods
@@ -75,6 +81,7 @@ pomodoroTotal: number = 0
   }
 
   timeCount(time: number) {
+    
     if (this.pomodoroComplete == 0) {
       
       this.status =  "pomodoro number " + this.pomodoroCount + "."
@@ -126,7 +133,6 @@ pomodoroTotal: number = 0
                     this.resetTime("long break", this.time)
                     console.log(this.task)
       }
-      
       console.log("long break"+time)
       
     }
@@ -152,11 +158,17 @@ pomodoroTotal: number = 0
     this.active = false
     this.time = 0
     this.secondsToMinutes = this.time
+
+    //                                                                           <---- local reset
+    this.localReset('');
   }
 
   secondsToMin(s:number) {
 
     // this.hour = Math.floor(s / 3600)
+
+    // just in case I want to make the settings more flexible
+
     this.minutes = Math.floor(s % 3600 / 60)
     this.seconds = Math.floor(s % 3600 % 60)
 
@@ -168,6 +180,10 @@ pomodoroTotal: number = 0
     else
     this.secondsToMinutes =  `${this.mString.slice(-2)} : ${this.sString.slice(-2)}`
 
+    //                                                              <--- update
+    this.localSave(this.task);
+
+    // figure out a right place to save and a right place to clean local storage
   }
 
   // methods for goal : actual task to complete
@@ -175,19 +191,24 @@ pomodoroTotal: number = 0
   saveTask(f) {
     this.goal = f.value.task
     this.task = new Task(this.goal, new Date)
+
+    this.localSave(this.task);
+    // figure out how to use the local sotrage to temporarily 
+    // store everything if the user doesnt have an account
+
+    // get back the object by using JSON.parse()
   }
 
-   // update task with every pomodoro
+    stop() {
+      this.reset();
+      this.goal = null;
+    }
 
-  update(task) {
-    console.log(task)
-    this.getTask(task)
+  localSave(tasks) {
+    localStorage.setItem('task', JSON.stringify(tasks));
   }
 
-  // get resent task id
-
-  getTask(task) {
-
+  localReset(reset) {
+    localStorage.setItem('task', reset);
   }
-
 }

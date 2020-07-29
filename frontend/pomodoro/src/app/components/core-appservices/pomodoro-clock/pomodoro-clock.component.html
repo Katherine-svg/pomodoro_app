@@ -4,6 +4,7 @@
 
         <label>What task would you like to achive?</label>
         <input type="text" name="task" ngModel required #task="ngModel" />
+        <!-- ADD REQUIRED ALERT -->
         <button>Create task</button>
           
     </form>
@@ -19,6 +20,7 @@
 
 <div *ngIf="active == false; else pauseReset">
     <button id="start" (click)="start()" >Start</button>
+    <button id="stop" (click)="stop()" >Stop</button>
 </div>
 <ng-template #pauseReset>
     <button id="pause" (click)="pause()" >Pause</button>

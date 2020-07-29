@@ -16,4 +16,5 @@ export class LogManagmentComponent implements OnInit {
     return sessionStorage.getItem("currentuser") || ''
   }
 
+  // I want the log in to change to sign up when it switches to the login component
 }
